@@ -4,9 +4,9 @@ type WorkSectionType = {
 	source: StaticImageData;
 	altText: string;
 	content: {
-        header: string;
-        body: string;
-    };
+		titles: string[];
+		body: string;
+	};
 };
 
 export default function WorkSection({
@@ -17,15 +17,19 @@ export default function WorkSection({
 	return (
 		<div className="flex bg-white shadow-xl p-4 my-4">
 			<div className="mr-4">
-				<Image
-					src={source}
-					width={100}
-					height={100}
-					alt="Principal Financial Group Logo"
-				/>
+				<Image src={source} width={100} height={100} alt={altText} />
 			</div>
 			<div>
-				<h4 className="text-lg font-medium">{content.header}</h4>
+				<div className="flex">
+					<ul className="ml-6 list-disc text-lightGray w-full">
+						{content.titles.map((title) => (
+							<li className="text-lg font-medium before:">
+								<span className="text-black">{title}</span>
+							</li>
+						))}
+					</ul>
+					<p>{content.body}</p>
+				</div>
 			</div>
 		</div>
 	);

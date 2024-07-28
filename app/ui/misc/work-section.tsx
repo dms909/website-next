@@ -2,6 +2,8 @@ import Image, { StaticImageData } from "next/image";
 
 type WorkSectionType = {
 	source: StaticImageData;
+	imgWidth: number;
+	imgHeight: number;
 	altText: string;
 	content: {
 		titles: string[];
@@ -11,13 +13,15 @@ type WorkSectionType = {
 
 export default function WorkSection({
 	source,
+	imgWidth,
+	imgHeight,
 	altText,
 	content,
 }: WorkSectionType) {
 	return (
 		<div className="flex bg-white shadow-xl p-4 my-4">
 			<div className="mr-4">
-				<Image src={source} width={100} height={100} alt={altText} />
+				<Image src={source} width={imgWidth} height={imgHeight} alt={altText} />
 			</div>
 			<ul className="ml-6 list-disc text-lightGray w-full">
 				{content.titles.map((title) => (
@@ -26,7 +30,7 @@ export default function WorkSection({
 					</li>
 				))}
 			</ul>
-			<p >{content.body}</p>
+			<p>{content.body}</p>
 		</div>
 	);
 }

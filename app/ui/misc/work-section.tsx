@@ -21,7 +21,12 @@ export default function WorkSection({
 	return (
 		<div className="flex bg-white shadow-xl p-4 my-4">
 			<div className="mr-4">
-				<Image src={source} width={imgWidth} height={imgHeight} alt={altText} />
+				<Image
+					src={source}
+					width={imgWidth}
+					height={imgHeight}
+					alt={altText}
+				/>
 			</div>
 			<ul className="ml-6 list-disc text-lightGray w-full">
 				{content.titles.map((title) => (

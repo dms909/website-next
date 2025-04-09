@@ -8,7 +8,6 @@ export default function Home() {
     <main className="container px-2 mx-auto sm:px-12 md:px-24 lg:px-48 xl:px-72">
       <NavBar />
       <Greeting />
-      <Experience />
     </main>
   );
 }

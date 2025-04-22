@@ -17,12 +17,12 @@ export default function Greeting() {
 			<p className="mt-6 text-neutral-700 dark:text-white">
 				Currently, I'm a Software Engineer II at Principal Financial
 				Group, where I contribute to the UI development of
-				customer-facing applications and maintain backend services
-				related to payments and billing domains.
+				customer-facing applications and maintain backend domains
+				related to payments and billing.
 			</p>
 
 			<p className="mt-6 text-neutral-700 dark:text-white">
-				Outside of work, I enjoy watching horror films, exploring new
+				Outside of work, I enjoy watching horror films, listening to new
 				music, attending concerts, and hanging out with my two cats.
 			</p>
 

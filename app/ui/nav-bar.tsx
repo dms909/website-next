@@ -32,6 +32,9 @@ export default function NavBar() {
 				<Link href="/" className="hover:text-gray-500 transition">
 					Home
 				</Link>
+				<Link href="/blog" className="hover:text-gray-500 transition">
+					Blog
+				</Link>
 			</div>
 
 			<div className="hidden sm:flex items-center space-x-4">

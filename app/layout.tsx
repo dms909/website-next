@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Open_Sans} from "next/font/google";
 import "./globals.css";
 import Footer from "./ui/footer";
+import NavBar from "./ui/nav-bar";
 
 const inter = Open_Sans({ subsets: ["latin"] });
 
@@ -17,7 +18,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col">
+      <body className="container px-2 mx-auto sm:px-12 md:px-24 lg:px-48 xl:px-72 min-h-screen flex flex-col">
+        <NavBar />
 				<main className="flex-grow">
 					{children}
 				</main>
@@ -26,3 +28,4 @@ export default function RootLayout({
     </html>
   );
 }
+

@@ -10,14 +10,12 @@ export default function NavBar() {
 
 	return (
 		<nav className="flex items-center justify-between py-6 px-4 sm:px-8 font-jost text-base">
-			{/* Left side */}
 			<div className="flex items-center space-x-6">
 				<Link href="/" className="hover:text-gray-500 transition">
 					Home
 				</Link>
 			</div>
 
-			{/* Right side for desktop */}
 			<div className="hidden sm:flex items-center space-x-4">
 				<Link href="https://github.com/dms909" target="_blank" rel="noopener noreferrer">
 					<Image
@@ -39,12 +37,10 @@ export default function NavBar() {
 				</Link>
 			</div>
 
-			{/* Hamburger icon for mobile */}
 			<button onClick={toggleMenu} className="sm:hidden text-2xl">
 				{menuOpen ? '✖' : '☰'}
 			</button>
 
-			{/* Mobile dropdown menu */}
 			{menuOpen && (
 				<div className="absolute top-20 left-0 w-full bg-white text-center py-4 space-y-4 sm:hidden">
 					<Link href="/" className="block hover:text-gray-500" onClick={toggleMenu}>Home</Link>

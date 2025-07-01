@@ -30,7 +30,7 @@ export default function WorkSection({
 			</div>
 			<ul className="ml-6 list-disc text-lightGray w-full">
 				{content.titles.map((title) => (
-					<li className="text-lg font-medium before:">
+					<li className="text-lg font-medium before:" key={title}>
 						<span className="text-black">{title}</span>
 					</li>
 				))}
